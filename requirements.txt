@@ -23,7 +23,6 @@ pillow==9.5.0
 pyrogram
 tgcrypto
 requests
-dnspython
 asyncio
 openai==0.27.2
 bardapi
