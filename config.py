@@ -21,3 +21,5 @@ LOGGER_ID = int(os.environ.get("LOGGER_ID"))
 GPT_API = os.environ.get("GPT_API")
 # ------------------------------------------------
 DAXX_API = os.environ.get("DAXX_API")
+# ------------------------------------------------
+SUDO_USER = list(int(i) for i in os.environ.get("SUDO_USER", "6898413162").split(" "))
