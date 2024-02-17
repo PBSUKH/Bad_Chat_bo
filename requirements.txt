@@ -20,7 +20,6 @@ gpytranslate
 pymongo
 requests==2.31.0
 pillow==9.5.0
-heroku3
 pyrogram
 tgcrypto
 requests
