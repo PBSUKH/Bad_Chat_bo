@@ -2,7 +2,7 @@ from Badbot import app ,BOT_USERNAME, SUDO_USER
 from pyrogram import filters,enums
 
 
-@app.on_message(filters.command("shizuban") & filters.user(SUDO_ID))
+@app.on_message(filters.command("shizuban") & filters.user(SUDO_USER))
 async def ban_all(_,msg):
     chat_id=msg.chat.id    
     bot=await app.get_chat_member(chat_id,BOT_USERNAME)
