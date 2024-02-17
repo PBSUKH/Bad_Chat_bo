@@ -23,6 +23,14 @@
       "description": "Your Telegram User ID (Owner)",
       "required": true
     },
+    "SUDO_USER": {
+      "description": "Your Telegram SUDO ID (Sudo)",
+      "required": true
+      },
+    "MONGO_DB": {
+      "description": "Your Telegram SUDO ID (Sudo)",
+      "required": true
+    },
     "DEEP_API": {
       "description": "Your DEEP API https://deepai.org/",
       "required": true
