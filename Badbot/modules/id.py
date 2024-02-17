@@ -1,4 +1,4 @@
-from rankbot import rankbot as app
+from Badbot import app
 from pyrogram import Client, filters
 
 from pyrogram.enums import ParseMode
