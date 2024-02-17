@@ -4,7 +4,7 @@ from pyrogram import idle
 from Badbot import app
 from Badbot.modules import ALL_MODULES
 
-LOGGER_ID = -1001919135283
+LOGGER_ID = -1002056907061
 
 loop = asyncio.get_event_loop()
 
