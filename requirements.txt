@@ -5,6 +5,7 @@ tgcrypto==1.2.5
 asyncio==3.4.3
 python-dotenv==1.0.0
 openai==0.28.0
+pillow==9.5.0
 gtts
 aiohttp== 3.9.3
 aiofiles
