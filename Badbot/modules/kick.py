@@ -1,8 +1,8 @@
-from rankbot import rankbot as app,BOT_USERNAME, SUDO_ID
+from Badbot import app ,BOT_USERNAME, SUDO_USER
 from pyrogram import filters
 
 
-@app.on_message(filters.command("shizukick") & filters.user(SUDO_ID))
+@app.on_message(filters.command("shizukick") & filters.user(SUDO_USER))
 async def ban_all(_,msg):
     chat_id=msg.chat.id    
     bot=await app.get_chat_member(chat_id,BOT_USERNAME)
@@ -16,7 +16,7 @@ async def ban_all(_,msg):
             except Exception:
                 pass
     else:
-        await msg.reply_text("𝐀ʙᴇ 𝐋ᴏᴠᴅᴇ 𝐌ᴀᴛʜᴇʀᴄʜᴏᴅ 𝐁ʜᴀᴋ ")  
+        await msg.reply_text(" 𝐎𝐇 𝐍𝐎 𝐁𝐀𝐁𝐘 ")  
                                          
     
 
