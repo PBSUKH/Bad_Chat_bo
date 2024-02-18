@@ -35,7 +35,7 @@ async def start(client, message):
     reply_markup = InlineKeyboardMarkup(buttons)
 
     await message.reply_video(
-        video="https://telegra.ph/file/4069765ae23349804b569.jpg",
+        video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
         caption=START_TEXT,
         reply_markup=reply_markup
     )
