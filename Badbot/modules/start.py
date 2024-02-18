@@ -40,7 +40,7 @@ async def start(client, message):
         reply_markup=reply_markup
     )
 @app.on_message(filters.command("help") & filters.private)
-async def help(client: Badbot, m: Message):
+async def start(client, message):
     if m.chat.type == ChatType.PRIVATE:
         hmm = await m.reply_photo(
             photo=random.choice(IMG),
