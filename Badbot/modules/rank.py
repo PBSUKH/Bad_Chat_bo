@@ -43,7 +43,7 @@ def _watcher(_, message):
 
 # ------------------- ranks ------------------ #
 
-@app.on_message(filters.command("today"))
+@app.on_message(filters.command("ranking"))
 async def today_(_, message):
     chat_id = message.chat.id
     if chat_id in today:
