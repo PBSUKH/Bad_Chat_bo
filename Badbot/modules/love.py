@@ -4,7 +4,7 @@ from Badbot.data.shayari import shayari_list
 from Badbot.data.jokes import jokes_list
 from Badbot.data.songs import songs_lyrics
 from Badbot.data.love import love_shayari
-from Badbot.data.dialogues import dialogue_list
+from Badbot.daa.dialogues import dialogue_list
 import random
 import os
 
