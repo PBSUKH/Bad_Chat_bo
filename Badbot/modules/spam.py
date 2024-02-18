@@ -2,8 +2,8 @@ import pyrogram
 import time
 from pyrogram import filters
 from pyrogram import Client
-from Badbot import badbot
-from  import SUDOERS
+from Badbot import app
+from Badbot import app ,SUDO_USER
 
 # Define the command handler
 @app.on_message(filters.command("raid", prefixes=".")  & SUDOERS)
