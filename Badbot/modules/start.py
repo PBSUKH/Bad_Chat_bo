@@ -50,9 +50,7 @@ async def start(client, message):
     )
 @app.on_message(filters.command("help") & filters.private)
 async def start(client, message):
-    if m.chat.type == ChatType.PRIVATE:
-        hmm = await m.reply_photo(
-            photo=random.choice(IMG),
+            video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
             caption=HELP_READ,
             reply_markup=InlineKeyboardMarkup(HELP_BTN),
         )
