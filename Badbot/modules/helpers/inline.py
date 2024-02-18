@@ -14,7 +14,7 @@ PNG_BTN = [
     [
         InlineKeyboardButton(
             text="•─╼⃝𖠁𝐀ᴅᴅ ◈ 𝐌ᴇ ◈ 𝐁ᴀʙʏ𖠁⃝╾─•",
-            url=f"https://t.me/{MickeyBot.username}?startgroup=true",
+            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
