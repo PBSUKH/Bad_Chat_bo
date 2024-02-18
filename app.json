@@ -28,7 +28,15 @@
       "required": true
       },
     "MONGO_DB": {
-      "description": "Your Telegram SUDO ID (Sudo)",
+      "description": "Your Telegram SUDO ID (Mongo_db)",
+      "required": true
+      },
+    "SUPPORT_GRP": {
+      "description": "Your Telegram SUPPORT_GRP (Support_grp)",
+      "required": true
+      },
+    "UPDATE_CHNL": {
+      "description": "Your Telegram UPDATE_CHNL (Update_chnl)",
       "required": true
     },
     "DEEP_API": {
