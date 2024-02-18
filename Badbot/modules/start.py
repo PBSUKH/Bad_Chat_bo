@@ -51,7 +51,7 @@ async def start(client, message):
     )
 @app.on_message(filters.command("help") & filters.private)
 async def start(client, message):
-    if m.chat.type == ChatType.PRIVATE:
+    if chat.type == ChatType.PRIVATE:
         hmm = await m.reply_photo(
             photo=random.choice(IMG),
             caption=HELP_READ,
