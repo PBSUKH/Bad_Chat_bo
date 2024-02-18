@@ -47,32 +47,32 @@
     "SUPPORT_GRP": {
       "description": "Your Telegram SUPPORT_GRP (Support_grp)",
       "required": true
-      "value": "6566179661"
+      "value": "ll_THE_BAD_BOT_ll"
       },
     "UPDATE_CHNL": {
       "description": "Your Telegram UPDATE_CHNL (Update_chnl)",
       "required": true
-      "value": "6566179661"
+      "value": "ll_THE_BAD_BOT_ll"
     },
     "DEEP_API": {
       "description": "Your DEEP API https://deepai.org/",
       "required": true
-      "value": "6566179661"
+      "value": "f03e1515-27f8-4976-b04b-bf72803f3a99"
     },
     "LOGGER_ID": {
       "description": "Your Logger Chat ID",
       "required": true
-      "value": "29908998"
+      "value": "-1002056907061"
     },
     "DAXX_API": {
       "description": "NEED DAXX_API GO TO @IAM_DAXXBOT",
       "required": true
-      "value": "29908998"
+      "value": "BAD_APIk8JL2mBIu?z(d8XAd2Ip6R;+@1Wljc"
     },
     "GPT_API": {
       "description": "Your GPT API Key open ai",
       "required": true
-      "value": "29908998"
+      "value": "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"
     }
   },
   "buildpacks": [
