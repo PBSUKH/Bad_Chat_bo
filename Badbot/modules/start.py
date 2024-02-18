@@ -48,20 +48,20 @@ async def start(client, message):
         video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
         caption=START_TEXT,
         reply_markup=reply_markup
-    ),
+    )
 
 
 @app.on_message(filters.command("help") & filters.private)
 async def start(client, message):
     chat_id = message.chat.id
-         await m.reply_photo(
+         await message.reply_photo(
             photo=random.choice(IMG),
             caption=HELP_READ,
             reply_markup=InlineKeyboardMarkup(HELP_BTN),
-        ),
+        )
         await add_served_user(m.from_user.id)
     else:
-         await m.reply_photo(
+         await message.reply_photo(
             photo=random.choice(IMG),
             caption=HELP_READ,
             reply_markup=InlineKeyboardMarkup(HELP_BTN),
