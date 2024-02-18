@@ -53,7 +53,6 @@ async def start(client, message):
             video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
             caption=HELP_READ,
             reply_markup=InlineKeyboardMarkup(HELP_BTN),
-        )
         await add_served_user(m.from_user.id)
     else:
         await m.reply_photo(
