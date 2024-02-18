@@ -3,11 +3,6 @@
 
 import os
 from os import getenv
-from telethon import TelegramClient
-from decouple import config
-import logging
-
- 
 # ---------------R---------------------------------
 API_ID = int(os.environ.get("API_ID"))
 # ------------------------------------------------
@@ -30,19 +25,3 @@ DAXX_API = os.environ.get("DAXX_API")
 SUDO_USER = list(int(i) for i in os.environ.get("SUDO_USER", "6898413162").split(" "))
 # ------------------------------------------------
 MONGO_DB = os.environ.get("MONGO_DB")
-# ------------------------------------------------
-CMD_HNDLR = getenv("CMD_HNDLR", default=".")
-# ------------------------------------------------
-
-# ------------------------------------------------
-
-# Don't Mess with Codes !! 
-DB_URI = config("DATABASE_URL", None)
-SUDO_USERS.append(OWNER_ID)
-
-# ------------------------------------------------
-# Tokens
-SK10 = TelegramClient('MK', API_ID, API_HASH).start(bot_token=BOT_TOKEN10)
-# ------------------------------------------------
-BOT_TOKEN10 = config("BOT_TOKEN10", default=None)
-# ------------------------------------------------
