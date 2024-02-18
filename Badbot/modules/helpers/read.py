@@ -1,4 +1,4 @@
-from config import OWNER_ID, 
+from config import OWNER_ID, BOT_NAME
 from Badbot import app
 
 START = f"""
