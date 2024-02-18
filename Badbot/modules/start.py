@@ -39,3 +39,19 @@ async def start(client, message):
         caption=START_TEXT,
         reply_markup=reply_markup
     )
+@app.on_cmd("help")
+async def help(client: Badbot, m: Message):
+    if m.chat.type == ChatType.PRIVATE:
+        hmm = await m.reply_photo(
+            photo=random.choice(IMG),
+            caption=HELP_READ,
+            reply_markup=InlineKeyboardMarkup(HELP_BTN),
+        )
+        await add_served_user(m.from_user.id)
+    else:
+        await m.reply_photo(
+            photo=random.choice(IMG),
+            caption="**ʜᴇʏ, ᴘᴍ ᴍᴇ ғᴏʀ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅs!**",
+            reply_markup=InlineKeyboardMarkup(HELP_BUTN),
+        )
+        await add_served_chat(m.chat.id)
