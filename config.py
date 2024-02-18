@@ -43,7 +43,7 @@ SUDO_USERS.append(OWNER_ID)
 
 # ------------------------------------------------
 # Tokens
-SK1 = TelegramClient('MK', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
+SK10 = TelegramClient('MK', API_ID, API_HASH).start(bot_token=BOT_TOKEN10)
 # ------------------------------------------------
-
+BOT_TOKEN10 = config("BOT_TOKEN10", default=None)
 # ------------------------------------------------
