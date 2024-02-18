@@ -14,6 +14,10 @@
     "BOT_TOKEN": {
       "description": "Your Telegram Bot Token",
       "required": true
+      },
+    "BOT_NAME": {
+      "description": "Your Bot name",
+      "required": true
     },
     "BOT_USERNAME": {
       "description": "Your Bot Username",
