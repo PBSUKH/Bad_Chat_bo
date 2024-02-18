@@ -3,17 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMedi
 from config import BOT_USERNAME, OWNER_ID
 from pyrogram.types import InlineKeyboardButton as ib
 import asyncio
-from pyrogram.enums import ChatType
 from Badbot import app
-from Badbot.modules.helpers import (
-    CLOSE_BTN,
-    DEV_OP,
-    HELP_BTN,
-    HELP_BUTN,
-    HELP_READ,
-    HELP_START,
-    START,
-)
 
 
 START_TEXT = """
@@ -49,15 +39,3 @@ async def start(client, message):
         caption=START_TEXT,
         reply_markup=reply_markup
     )
-
-
-@app.on_message(filters.command("help") & filters.private)
-async def start(client, message):
-    buttons = [
-                [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="HELP_BTN")],
-    ]
-await message.reply_video(
-        video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
-        caption=HELP_READ,
-        reply_markup=reply_markup
-)
