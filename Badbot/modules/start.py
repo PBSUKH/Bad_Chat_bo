@@ -53,8 +53,13 @@ async def start(client, message):
 
 @app.on_message(filters.command("help") & filters.private)
 async def start(client, message):
+    buttons = [
+        [
+                [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="HELP_BTN")],
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
 await message.reply_video(
         video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
         caption=HELP_READ,
-        reply_markup=InlineKeyboardMarkup(HELP_BTN),
+        reply_markup=reply_markup
 )
