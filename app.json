@@ -42,30 +42,37 @@
     "MONGO_DB": {
       "description": "Your Telegram SUDO ID (Mongo_db)",
       "required": true
+      "value": "mongodb+srv://Badmunda_13:badmunda50@cluster0.9oyzqux.mongodb.net/?retryWrites=true&w=majority"
       },
     "SUPPORT_GRP": {
       "description": "Your Telegram SUPPORT_GRP (Support_grp)",
       "required": true
+      "value": "6566179661"
       },
     "UPDATE_CHNL": {
       "description": "Your Telegram UPDATE_CHNL (Update_chnl)",
       "required": true
+      "value": "6566179661"
     },
     "DEEP_API": {
       "description": "Your DEEP API https://deepai.org/",
       "required": true
+      "value": "6566179661"
     },
     "LOGGER_ID": {
       "description": "Your Logger Chat ID",
       "required": true
+      "value": "29908998"
     },
     "DAXX_API": {
       "description": "NEED DAXX_API GO TO @IAM_DAXXBOT",
       "required": true
+      "value": "29908998"
     },
     "GPT_API": {
       "description": "Your GPT API Key open ai",
       "required": true
+      "value": "29908998"
     }
   },
   "buildpacks": [
