@@ -54,7 +54,6 @@ async def start(client, message):
 @app.on_message(filters.command("help") & filters.private)
 async def start(client, message):
     buttons = [
-        [
                 [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="HELP_BTN")],
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
