@@ -18,6 +18,12 @@ START_TEXT = """
 𝐀ɴᴅ 𝐎ᴛʜᴇʀ 𝐀ɴʏ 𝐅ᴇᴀᴛᴜʀᴇs ❤️
 ━━━━━━━━━━━━━━━━━━━━━━━━━**"""
 
+HELP_TEXT = """
+❤️ 𝗔𝗜 𝗕𝗢𝗧 🤖
+
+━━━━━━━━━━━━━━━━━━━━━━━━"""
+
+
 
 
 @app.on_message(filters.command("start") & filters.private)
@@ -37,5 +43,24 @@ async def start(client, message):
     await message.reply_video(
         video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
         caption=START_TEXT,
+        reply_markup=reply_markup
+    )
+
+
+
+@app.on_message(filters.command("help") & filters.private)
+async def start(client, message):
+    buttons = [
+        [
+            InlineKeyboardButton("✯ 𝐒ᴜᴘʀᴏᴛ ✯", url=f"https://t.me/ll_THE_BAD_BOT_ll"),
+            InlineKeyboardButton("✯ 𝐎ᴡɴᴇʀ ✯", user_id=OWNER_ID)
+        ]
+    ]
+
+    reply_markup = InlineKeyboardMarkup(buttons)
+
+    await message.reply_video(
+        video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
+        caption=HELP_TEXT,
         reply_markup=reply_markup
     )
