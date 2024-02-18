@@ -52,15 +52,15 @@ async def start(client, message):
 @app.on_message(filters.command("help") & filters.private)
 async def start(client, message):
     chat_id = message.chat.id
-        hmm = await m.reply_photo(
-            photo=random.choice(IMG),
+        await message.reply_video(
+        video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
             caption=HELP_READ,
             reply_markup=InlineKeyboardMarkup(HELP_BTN),
         )
         await add_served_user(m.from_user.id)
     else:
-        await m.reply_photo(
-            photo=random.choice(IMG),
+        await message.reply_video(
+        video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
             caption="**ʜᴇʏ, ᴘᴍ ᴍᴇ ғᴏʀ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅs!**",
             reply_markup=InlineKeyboardMarkup(HELP_BUTN),
         )
