@@ -4,6 +4,17 @@ from config import BOT_USERNAME, OWNER_ID
 from pyrogram.types import InlineKeyboardButton as ib
 import asyncio
 from Badbot import app
+from Badbot.data.chats import add_served_chat
+from Badbot.data.users import add_served_user
+from Badbot.modules.helpers import (
+    CLOSE_BTN,
+    DEV_OP,
+    HELP_BTN,
+    HELP_BUTN,
+    HELP_READ,
+    HELP_START,
+    START,
+)
 
 
 START_TEXT = """
