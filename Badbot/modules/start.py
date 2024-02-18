@@ -3,6 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMedi
 from config import BOT_USERNAME, OWNER_ID
 from pyrogram.types import InlineKeyboardButton as ib
 import asyncio
+from pyrogram.enums import ChatType
 from Badbot import app
 from Badbot.modules.helpers import (
     CLOSE_BTN,
@@ -50,9 +51,12 @@ async def start(client, message):
     )
 @app.on_message(filters.command("help") & filters.private)
 async def start(client, message):
-            video="https://telegra.ph/file/82a0c010f573064a0ce59.mp4",
+    if m.chat.type == ChatType.PRIVATE:
+        hmm = await m.reply_photo(
+            photo=random.choice(IMG),
             caption=HELP_READ,
             reply_markup=InlineKeyboardMarkup(HELP_BTN),
+        )
         await add_served_user(m.from_user.id)
     else:
         await m.reply_photo(
