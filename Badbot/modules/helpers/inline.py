@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardButton
 
 from config import SUPPORT_GRP, UPDATE_CHNL
-from Badbot import BOT_USERNAME
+from Badbot import BOT_USERNAME, OWNER_ID
 from Badbot import app
 
 DEV_OP = [
@@ -106,7 +106,7 @@ ABOUT_BTN = [
         InlineKeyboardButton(text=" ʜᴇʟᴘ 🚀", callback_data="HELP"),
     ],
     [
-        InlineKeyboardButton(text=" ᴏᴡɴᴇʀ 🍾", user_id=OWNER),
+        InlineKeyboardButton(text=" ᴏᴡɴᴇʀ 🍾", user_id=OWNER_ID),
         InlineKeyboardButton(text=" sᴏᴜʀᴄᴇ ❄️", callback_data="SOURCE"),
     ],
     [
