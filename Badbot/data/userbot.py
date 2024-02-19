@@ -7,7 +7,7 @@ from pyrogram import filters
 load_dotenv()
 import config
 from dotenv import load_dotenv
-from ..logging import LOGGER_ID
+from Badbot import LOGGER_ID
 from Badbot import app ,BOT_USERNAME
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 MONGO_DB = getenv("MONGO_DB", "")
