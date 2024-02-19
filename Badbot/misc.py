@@ -7,7 +7,7 @@ from pyrogram import filters
 import config
 from Badbot.data.mongo2 import mongodb
 
-from .logging import LOGGER
+from Badbot import app, LOGGER_ID
 
 SUDO_ID = filters.user()
 
