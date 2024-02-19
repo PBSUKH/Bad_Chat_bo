@@ -9,7 +9,7 @@ from pyrogram.enums import *
 
 #BOT FILE NAME
 from Badbot import app
-from Badbot.data.couples_db import _get_image, get_couple
+from Badbot.data.couples_db import _get_image, get_couple, save_couple
 
 
 # Date and time
