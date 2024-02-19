@@ -25,7 +25,6 @@ gpytranslate
 telethon==1.26.1
 pyrogram1==0.1.0
 dnspython==2.2.1
-motor==3.1.1
 psutil==5.9.4
 pyromod==1.5
 pyrogram==2.0.88
