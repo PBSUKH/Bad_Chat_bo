@@ -1,5 +1,6 @@
 import requests
 import random
+from Badbot import app
 from Badbot.misc import SUDO_ID
 from pyrogram import * 
 from pyrogram.types import *
