@@ -1,87 +1,41 @@
+import traceback
 
-
-
-from pyrogram.enums import ChatMemberStatus as CMS
+from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 
-from Badbot import app
-from Badbot.modules.helpers import (
-    ABOUT_BTN,
-    ABOUT_READ,
-    ADMIN_READ,
-    BACK,
-    CHATBOT_BACK,
-    CHATBOT_READ,
-    DEV_OP,
-    HELP_BTN,
-    HELP_READ,
-    MUSIC_BACK_BTN,
-    SOURCE_READ,
-    START,
-    TOOLS_DATA_READ,
-)
+from Badbot.modules.generate import generate_session, ask_ques, buttons_ques
 
 
-@app.on_callback_query()
-async def cb_handler(_, query: CallbackQuery):
-    if query.data == "HELP":
-        await query.message.edit_text(
-            text=HELP_READ,
-            reply_markup=InlineKeyboardMarkup(HELP_BTN),
-            disable_web_page_preview=True,
-        )
-    elif query.data == "CLOSE":
-        await query.message.delete()
-        await query.answer("ᴄʟᴏsᴇᴅ ᴍᴇɴᴜ!", show_alert=True)
-    elif query.data == "BACK":
-        await query.message.edit(
-            text=START,
-            reply_markup=InlineKeyboardMarkup(DEV_OP),
-        )
-    elif query.data == "SOURCE":
-        await query.message.edit(
-            text=SOURCE_READ,
-            reply_markup=InlineKeyboardMarkup(BACK),
-            disable_web_page_preview=True,
-        )
-    elif query.data == "ABOUT":
-        await query.message.edit(
-            text=ABOUT_READ,
-            reply_markup=InlineKeyboardMarkup(ABOUT_BTN),
-            disable_web_page_preview=True,
-        )
-    elif query.data == "ADMINS":
-        await query.message.edit(
-            text=ADMIN_READ,
-            reply_markup=InlineKeyboardMarkup(MUSIC_BACK_BTN),
-        )
-    elif query.data == "TOOLS_DATA":
-        await query.message.edit(
-            text=TOOLS_DATA_READ,
-            reply_markup=InlineKeyboardMarkup(CHATBOT_BACK),
-        )
-    elif query.data == "BACK_HELP":
-        await query.message.edit(
-            text=HELP_READ,
-            reply_markup=InlineKeyboardMarkup(HELP_BTN),
-        )
-    elif query.data == "CHATBOT_CMD":
-        await query.message.edit(
-            text=CHATBOT_READ,
-            reply_markup=InlineKeyboardMarkup(CHATBOT_BACK),
-        )
-    elif query.data == "CHATBOT_BACK":
-        await query.message.edit(
-            text=HELP_READ,
-            reply_markup=InlineKeyboardMarkup(HELP_BTN),
-        )
-    elif query.data == "addchat":
-        user_id = query.from_user.id
-        user_status = (await query.message.chat.get_member(user_id)).status
-        if user_status not in [CMS.OWNER, CMS.ADMINISTRATOR]:
-            return await query.answer(
-                "ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴇᴠᴇɴ ᴀɴ ᴀᴅᴍɪɴ, ᴅᴏɴ'ᴛ ᴛʀʏ ᴛʜɪs ᴇxᴘʟᴏsɪᴠᴇ sʜɪᴛ!",
-                show_alert=True,
-            )
-        
-        
+@Client.on_callback_query(filters.regex(pattern=r"^(generate|pyrogram|pyrogram1|pyrogram_bot|telethon_bot|telethon)$"))
+async def _callbacks(bot: Client, callback_query: CallbackQuery):
+    query = callback_query.matches[0].group(1)
+    if query == "generate":
+        await callback_query.answer()
+        await callback_query.message.reply(ask_ques, reply_markup=InlineKeyboardMarkup(buttons_ques))
+    elif query.startswith("pyrogram") or query.startswith("telethon"):
+        try:
+            if query == "pyrogram":
+                await callback_query.answer()
+                await generate_session(bot, callback_query.message)
+            elif query == "pyrogram1":
+                await callback_query.answer()
+                await generate_session(bot, callback_query.message, old_pyro=True)
+            elif query == "pyrogram_bot":
+                await callback_query.answer("» ᴛʜᴇ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴡɪʟʟ ʙᴇ ᴏғ ᴩʏʀᴏɢʀᴀᴍ ᴠ2.", show_alert=True)
+                await generate_session(bot, callback_query.message, is_bot=True)
+            elif query == "telethon_bot":
+                await callback_query.answer()
+                await generate_session(bot, callback_query.message, telethon=True, is_bot=True)
+            elif query == "telethon":
+                await callback_query.answer()
+                await generate_session(bot, callback_query.message, telethon=True)
+        except Exception as e:
+            print(traceback.format_exc())
+            print(e)
+            await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
+
+
+ERROR_MESSAGE = "ᴡᴛғ ! sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. \n\n**ᴇʀʀᴏʀ** : {} " \
+            "\n\n**ᴩʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ @II_BAD_BBY_II**, ɪғ ᴛʜɪs ᴍᴇssᴀɢᴇ " \
+            "ᴅᴏᴇsɴ'ᴛ ᴄᴏɴᴛᴀɪɴ ᴀɴʏ sᴇɴsɪᴛɪᴠᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ " \
+            "ʙᴇᴄᴀᴜsᴇ ᴛʜɪs ᴇʀʀᴏʀ ɪs **ɴᴏᴛ ʟᴏɢɢᴇᴅ ʙʏ ᴛʜᴇ ʙᴏᴛ** !"
