@@ -22,3 +22,4 @@ SafoneAPI
 pymongo
 pyrogram
 gpytranslate
+telethon==1.26.1
