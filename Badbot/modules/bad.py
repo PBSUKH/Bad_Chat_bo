@@ -1,7 +1,7 @@
 import requests
 import random
 from Badbot import app, userbot
-from Badbot.misc import SUDOERS
+from Badbot.misc import SUDO_ID
 from pyrogram import * 
 from pyrogram.types import *
 from Badbot.data.bad_ban import admin_filter
