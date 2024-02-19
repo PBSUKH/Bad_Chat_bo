@@ -20,8 +20,6 @@ async def ai_chat_bot(client, message):
                 return
     replied = message.reply_to_message
     if replied:
-        if replied.from_user.id == message.sender_chat.id
-            pass
         else:
             return
     await client.send_chat_action(chat_id, ChatAction.TYPING)
