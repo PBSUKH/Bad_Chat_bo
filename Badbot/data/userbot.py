@@ -27,28 +27,28 @@ class Userbot(Client):
             no_updates=True,
         )
         self.two = Client(
-            name="BADAss2",
+            name="Badbot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING2),
             no_updates=True,
         )
         self.three = Client(
-            name="BADAss3",
+            name="Badbot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING3),
             no_updates=True,
         )
         self.four = Client(
-            name="BADAss4",
+            name="Badbot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING4),
             no_updates=True,
         )
         self.five = Client(
-            name="BADAss5",
+            name="Badbot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING5),
