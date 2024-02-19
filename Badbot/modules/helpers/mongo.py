@@ -31,12 +31,12 @@ async def get_couple(chat_id: int, date: str):
         return False
 
 
-async def save_couple(chat_id: int, date: str, couple: dict):
+async def save_couple(chat_id: int, date: str, couple: dict, img: str):
     lovers = await _get_lovers(chat_id)
     lovers[date] = couple
     await coupledb.update_one(
         {"chat_id": chat_id},
-        {"$set": {"couple": lovers}},
+        {"$set": {"couple": lovers, "img": img}},
         upsert=True,
     )
 
