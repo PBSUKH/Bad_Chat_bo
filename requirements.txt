@@ -32,3 +32,4 @@ dnspython==2.2.1
 psutil==5.9.4
 pyromod==1.5
 telethon==1.26.1
+pyrogram2==2.0.88
