@@ -7,7 +7,8 @@ from config import OWNER_ID
 def filter(cmd: str):
     return filters.private & filters.incoming & filters.command(cmd)
 
-@Client.on_message(filter("gstart"))
+
+@app.on_message(filters.command("gstart") & filters.private)
 async def start(bot: Client, msg: Message):
     me2 = (await bot.get_me()).mention
     await bot.send_message(
