@@ -1,5 +1,5 @@
 import traceback
-
+from Badbot import app
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 
