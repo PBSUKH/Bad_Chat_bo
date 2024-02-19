@@ -1,11 +1,12 @@
-import os 
 import random
-from datetime import datetime 
-from telegraph import upload_file
-from PIL import Image , ImageDraw
-from pyrogram import *
-from pyrogram.types import *
-from pyrogram.enums import *
+from datetime import datetime
+
+from pyrogram import filters
+from pyrogram.enums import ChatType
+
+from Badbot import app
+from Badbot.modules.helpers.mongo import get_couple, save_couple
+
 
 #BOT FILE NAME
 from Badbot import app
