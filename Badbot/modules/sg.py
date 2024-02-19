@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.raw.functions.messages import DeleteHistory
 
-from Badbot.data import userbot as us, app
+from Badbot import app 
 from Badbot.data.userbot import assistants
 
 @app.on_message(filters.command("names"))
