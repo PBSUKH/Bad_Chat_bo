@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from Badnot.data.mongo2 import mongodb
+from Badbot.data.mongo2 import mongodb
 
 from .logging import LOGGER
 
