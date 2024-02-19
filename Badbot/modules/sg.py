@@ -1,10 +1,8 @@
 import asyncio
 import random
-
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.raw.functions.messages import DeleteHistory
-
 from Badbot import app 
 from Badbot.data.userbot import assistants
 
