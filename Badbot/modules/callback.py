@@ -6,8 +6,8 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 from Badbot.modules.generate import generate_session, ask_ques, buttons_ques
 
 
-@Client.on_callback_query(filters.regex(pattern=r"^(generate|pyrogram|pyrogram1|pyrogram_bot|telethon_bot|telethon)$"))
-async def _callbacks(bot: Client, callback_query: CallbackQuery):
+@app.on__callback_query(filters.regex(pattern=r"^(generate|pyrogram|pyrogram1|pyrogram_bot|telethon_bot|telethon)$"))
+async def _callbacks(bot: app, callback_query: CallbackQuery):
     query = callback_query.matches[0].group(1)
     if query == "generate":
         await callback_query.answer()
