@@ -1,3 +1,4 @@
+requests
 SafoneAPI
 pyrogram==2.0.106
 requests==2.31.0
