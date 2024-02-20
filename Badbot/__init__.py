@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 from pyrogram import Client
 from config import API_ID, API_HASH, BOT_TOKEN, BOT_USERNAME, OWNER_ID, GPT_API, LOGGER_ID, DEEP_API, SUDO_USER, BOT_NAME
 
+from SafoneAPI import SafoneAPI
+
+safone = SafoneAPI()
 
 loop = asyncio.get_event_loop()
 
