@@ -32,15 +32,3 @@ SUPPORT_GRP = getenv("SUPPORT_GRP", "ll_THE_BAD_BOT_ll")
 # ------------------------------------------------
 UPDATE_CHNL = getenv("UPDATE_CHNL", "ll_BAD_MUNDA_WORLD_ll")
 # ------------------------------------------------
-# Random Start Images
-IMG = [
-    "https://te.legra.ph/file/5bf629d10afd4af953585.jpg",
-]
-  
-  # ------------------------------------------------
-HEROKU_API_KEY = getenv("HEROKU_API_KEY")
-
-# ------------------------------------------------
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-
-  # ------------------------------------------------
