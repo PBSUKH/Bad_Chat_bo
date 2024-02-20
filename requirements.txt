@@ -21,3 +21,4 @@ telegraph
 pillow==9.5.0
 motor==3.3.2
 gpytranslate
+pymongo
