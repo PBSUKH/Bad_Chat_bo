@@ -1,4 +1,3 @@
-import re
 from pyrogram import filters
 from Badbot import app, safone
 
