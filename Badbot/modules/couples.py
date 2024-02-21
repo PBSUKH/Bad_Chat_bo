@@ -9,7 +9,7 @@ from pyrogram.enums import *
 
 #BOT FILE NAME
 from Badbot import app
-from Badbot.modules.helpers.mongo import get_couple, save_couple
+from Badbot.mongo import get_couple, save_couple
 def dt():
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M")
